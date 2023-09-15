@@ -126,8 +126,8 @@ const SelectedMovie = async ({ params }) => {
             <p data-testid="movie-runtime">{data.runtime} mins</p>
           </div>
           <div className="flex gap-4 flex-wrap sm:flex-wrap md:flex-nowrap lg:flex-nowrap w-full">
-            <div className="w-full md:w-3/5 text-justify text-[12px] md:text-[20px]">
-              <p className="pb-4" data-testid="movie-overview">
+            <div className="w-full md:w-3/5 text-[12px] md:text-[20px]">
+              <p className="pb-4 text-justify " data-testid="movie-overview">
                 {data.overview}
               </p>
 
