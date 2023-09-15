@@ -5,6 +5,7 @@ import default_banner from "public/default_banner.png";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
+import playTrailer from "public/Play2.png";
 
 async function getData(id) {
   const res = await fetch(
@@ -107,6 +108,14 @@ const SelectedMovie = async ({ params }) => {
             fill
             className="object-cover rounded-2xl"
           />
+          <div className=" flex flex-col items-center justify-center absolute w-full h-full">
+            <div className="flex items-center justify-center w-[100px] h-[100px] rounded-[50px] bg-[#E8E8E833] cursor-pointer">
+              <Image src={playTrailer} alt="play Trailer button" />
+            </div>
+            <p className="text-white text-[20px] md:text-[25px] font-medium">
+              Watch Trailer
+            </p>
+          </div>
         </div>
         <div className="flex flex-col gap-3">
           <div className="flex gap-5 font-bold text-[10px] md:text-[18px] ">
