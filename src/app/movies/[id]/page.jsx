@@ -50,7 +50,7 @@ const SelectedMovie = async ({ params }) => {
             </Link>
             <li className="h-[86px] justify-center md:justify-start pl-0 md:pl-[60px] flex items-center gap-3 border-r-4 border-red-600 bg-red-200 cursor-pointer">
               <Image
-                src="/Movie Projector.png"
+                src="/Movie_Projector.png"
                 height={25}
                 width={25}
                 alt="Movies"
@@ -79,7 +79,7 @@ const SelectedMovie = async ({ params }) => {
             </li>
           </ul>
           <div className="w-[170px] h-[228px] relative cursor-pointer hidden md:block">
-            <Image src="/Group 8.png" alt="sideBar" fill className="contain" />
+            <Image src="/Group_8.png" alt="sideBar" fill className="contain" />
           </div>
 
           <ul className="text-[20px] w-[60px] md:w-[226px]">
@@ -153,18 +153,18 @@ const SelectedMovie = async ({ params }) => {
               <Image
                 width={360}
                 height={55}
-                src="/Group 50.png"
+                src="/Group_50.png"
                 className="mb-[15px]"
                 alt="image"
               />
               <Image
                 width={360}
                 height={55}
-                src="/Group 51.png"
+                src="/Group_51.png"
                 className="mb-[15px]"
                 alt="image"
               />
-              <Image width={360} height={229} src="/Group 52.png" alt="image" />
+              <Image width={360} height={229} src="/Group_52.png" alt="image" />
             </div>
           </div>
         </div>
