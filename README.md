@@ -9,7 +9,7 @@ Additionally, users can search for a particular movie of choice, view details ab
 ## Getting Started (How to run the project locally)
 
 - First, Install Node on your PC.
-- Clone the repository to your local server by running git clone [githubUrl of this code]
+- Clone the repository to your local server by running git clone [URL to Clone](https://github.com/honordevop/moviebox)
 - Open the cloned repository in a code editor and run `npm install` in the code editor's terminal to install all the dependencies.
 
 Finally, run the development server:
@@ -26,7 +26,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-View project live by clicking [MovieBox](https://link-url-here.org)
+View project live by clicking [MovieBox](https://omoviebox.netlify.app/)
 
 Developed by Ogunlade Stephen Olayide
 HNGX Intenship Stage 2 Task.
