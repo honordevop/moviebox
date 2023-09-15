@@ -15,7 +15,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0 25px;
+  padding: 0 2px;
   /* background-color: yellow; */
 }
 
@@ -58,7 +58,7 @@
 
 @media screen and (max-width: 967px) {
   .searchInput {
-    max-width: 170px;
+    max-width: 200px;
   }
   .logo {
     width: 100px;

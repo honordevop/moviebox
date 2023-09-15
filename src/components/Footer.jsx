@@ -14,10 +14,12 @@ const Footer = () => {
         <Image alt="twitterIcon" src={twitterIcon} />
         <Image alt="youtubeIcon" src={youtubeIcon} />
       </div>
-      <div className="font-bold ">
-        <ul className="flex  gap-[48px]">
+      <div className="font-bold">
+        <ul className="flex gap-4 md:gap-[48px]">
           <li>Conditions of Use</li>
+          <span>|</span>
           <li>Privacy & Policy</li>
+          <span>|</span>
           <li>Press Room</li>
         </ul>
       </div>

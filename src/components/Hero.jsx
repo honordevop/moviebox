@@ -11,7 +11,7 @@ const Hero = () => {
       className={`${styles.heroWrapper}  w-[1220px] text-white relative z-1 flex flex-col gap-4`}
     >
       <div className="font-bold text-5xl  ">
-        <p className="leading-[56px]">
+        <p className="text-[40px] md:text-[56px]">
           John Wick 3 : <br /> Parabellum
         </p>
       </div>

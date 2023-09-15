@@ -13,7 +13,7 @@ import Link from "next/link";
 const MovieCard = () => {
   const { movies, loading, favourites, addToFavourites, error } =
     useGlobalContext();
-  const emptyArray = movies.length;
+
   // const [markFavourite, setMarkFavourite] = useState(false);
 
   // const favouriteClickHandler = (id) => {

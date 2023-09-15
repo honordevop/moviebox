@@ -8,7 +8,13 @@ import Hero from "./Hero";
 const Header = () => {
   return (
     <div className={`${styles.headerWrapper} flex flex-col justify-center`}>
-      <Image src={Poster} alt="poster" className={styles.img} fill={true} />
+      <Image
+        src={Poster}
+        alt="poster"
+        className={styles.img}
+        fill={true}
+        priority
+      />
       <Navbar />
       <Hero />
     </div>

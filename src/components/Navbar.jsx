@@ -2,11 +2,12 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./navbar.module.css";
-import logo from "public/Logo.png";
+import Logo from "public/tv.png";
 import searchIcon from "public/Search.svg";
 import Image from "next/image";
 import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "@/context/context";
+import Link from "next/link";
 
 const Navbar = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -25,9 +26,18 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={styles.navBarWrapper}>
+    <nav className={`${styles.navBarWrapper}`}>
       <div className={styles.navBar}>
-        <Image src={logo} alt="logo" className={styles.logo} />
+        <Link href="/">
+          <ul className="text-[20px]">
+            <li className="h-[86px] flex justify-center items-center gap-5 cursor-pointer">
+              <Image src={Logo} alt="logo" className="" />
+              <p className="font-bold text-white hidden md:block text-[25px]">
+                Movie
+              </p>
+            </li>
+          </ul>
+        </Link>
         <div className={styles.searchInputWrapper}>
           <input
             onChange={handleSearchInputChange}

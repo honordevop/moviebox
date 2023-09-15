@@ -7,13 +7,15 @@ import Link from "next/link";
 import styles from "./page.module.css";
 
 async function getData(id) {
-  const res = await fetch(`https://api.themoviedb.org/3/movie/${id}`, {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      Authorization: `${process.env.NEXT_PUBLIC_TMDB_BEARER_TOKEN}`,
-    },
-  });
+  const res = await fetch(
+    `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.NEXT_PUBLIC_TMDB_BEARER_API}`,
+    {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+      },
+    }
+  );
 
   if (!res.ok) {
     return notFound();
@@ -147,7 +149,7 @@ const SelectedMovie = async ({ params }) => {
                 </li>
               </ul>
             </div>
-            <div className="w-2/5">
+            <div className="w-4/5 md:w-2/5">
               <Image
                 width={360}
                 height={55}

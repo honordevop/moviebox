@@ -17,9 +17,8 @@ const AppProvider = ({ children }) => {
 
   // console.log(process.env.REACT_APP_TMDB_API_KEY);
 
-  const searchUrl = `https://api.themoviedb.org/3/search/movie?query=${searchTerm}`;
-
-  const rated = "https://api.themoviedb.org/3/movie/top_rated";
+  const searchUrl = `https://api.themoviedb.org/3/search/movie?query=${searchTerm}&api_key=${process.env.NEXT_PUBLIC_TMDB_BEARER_API}`;
+  const rated = `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.NEXT_PUBLIC_TMDB_BEARER_API}`;
 
   const fetchMovies = async (url) => {
     setError(false);
@@ -29,7 +28,6 @@ const AppProvider = ({ children }) => {
       const data = await axios.get(url, {
         headers: {
           accept: "application/json",
-          Authorization: process.env.NEXT_PUBLIC_TMDB_BEARER_TOKEN,
         },
       });
       // const response = await res.json();
