@@ -26,14 +26,12 @@ const AppProvider = ({ children }) => {
     setLoading(true);
 
     try {
-      const data = await axios(url, {
-        method: "GET",
+      const data = await axios.get(url, {
         headers: {
           accept: "application/json",
-          Authorization: `${process.env.NEXT_PUBLIC_TMDB_BEARER_TOKEN}`,
+          Authorization: process.env.NEXT_PUBLIC_TMDB_BEARER_TOKEN,
         },
       });
-
       // const response = await res.json();
       setMovies(data.data.results.slice(0, 10));
       // console.log(data.data.results.slice(0, 10));
