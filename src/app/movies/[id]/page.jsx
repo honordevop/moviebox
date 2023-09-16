@@ -100,7 +100,7 @@ const SelectedMovie = async ({ params }) => {
         <div className={`${styles.moviePosterWraper} relative rounded-2xl`}>
           <Image
             src={
-              data.backdrop_path
+              data?.backdrop_path
                 ? `https://image.tmdb.org/t/p/w500${data.backdrop_path}`
                 : default_banner
             }
@@ -119,16 +119,16 @@ const SelectedMovie = async ({ params }) => {
         </div>
         <div className="flex flex-col gap-3">
           <div className="flex gap-5 font-bold text-[10px] md:text-[18px] ">
-            <p data-testid="movie-title">{data.original_title}</p>
+            <p data-testid="movie-title">{data?.original_title}</p>
             <p data-testid="movie-release-date">
-              {new Date(`${data.release_date}`).toUTCString()}
+              {new Date(`${data?.release_date}`).toUTCString()}
             </p>
-            <p data-testid="movie-runtime">{data.runtime} mins</p>
+            <p data-testid="movie-runtime">{data?.runtime} mins</p>
           </div>
           <div className="flex gap-4 flex-wrap sm:flex-wrap md:flex-nowrap lg:flex-nowrap w-full">
             <div className="w-full md:w-3/5 text-[12px] md:text-[20px]">
               <p className="pb-4 text-justify " data-testid="movie-overview">
-                {data.overview}
+                {data?.overview}
               </p>
 
               <ul className="w-4/5 flex flex-col gap-3">
@@ -136,14 +136,14 @@ const SelectedMovie = async ({ params }) => {
                   <p>
                     Homepage:{" "}
                     <span className="text-[#BE123C]">
-                      {data.homepage || "Not Available"}
+                      {data?.homepage || "Not Available"}
                     </span>
                   </p>
                 </li>
                 <li>
                   <p>
                     Production Companies:{" "}
-                    {data.production_companies.map((company) => (
+                    {data?.production_companies.map((company) => (
                       <span className="text-[#BE123C]">{`${company.name} (${company.origin_country}), `}</span>
                     ))}
                   </p>
@@ -151,7 +151,7 @@ const SelectedMovie = async ({ params }) => {
                 <li>
                   <p>
                     Spoken Languages:{" "}
-                    {data.spoken_languages.map((language) => (
+                    {data?.spoken_languages.map((language) => (
                       <span className="text-[#BE123C]">{language.name}, </span>
                     ))}
                   </p>
